@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','tipo','avatar','instituicao_id'
     ];
 
     /**
@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public $timestamps=true;
+
+    public function instituicao(){
+        return $this->belongsTo(Instituicao::class,'instituicao_id');
+    }
+    public function disciplinas(){
+        return $this->belongsToMany(Disciplina::class);
+//        ,'disciplina_user','user_id','disciplina_id'
+    }
 }
