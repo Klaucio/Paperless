@@ -5,7 +5,7 @@
 <head>
 
     <!-- Title -->
-    <title>Alpha | Responsive Admin Dashboard Template</title>
+    <title>Iboot | Paperless</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+    <script src="{{ url('quickadmin/js') }}/bootstrap.min.js"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
     <link href="assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
