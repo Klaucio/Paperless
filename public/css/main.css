@@ -82,26 +82,6 @@ textarea {
 
 
 /*css reset*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -388,7 +368,7 @@ section.brand-bg .title {
 /* 3. Navigation Menu Styles
  ----------------------------------- */
 
-header.nav {
+.navbar-fixed {
     box-shadow: 0 1px 6px rgba(0,0,0,.35);
     width: 100%;
     top: 0px;
@@ -397,111 +377,12 @@ header.nav {
     -webkit-transition: top .5s;
             transition: top .5s;
 }
-header.nav.hide-menu {
-    top: -90px;
-}
-.primary-nav {
-    height: inherit;
-    line-height: inherit;
-    background-color: transparent!important;
-    box-shadow: none;
-}
-
-.primary-nav .brand-logo {
-    position: static;
-    font-size: inherit;
-}
-
-.primary-nav .brand-logo img {
-  height: 32px;
-  margin: 25px 5px 0;
-}
-
-.mobile-profile{
-    display: none;
-}
-
-.side-nav li {
-    margin-left: 40px;
-}
-
-.side-nav li,
-.side-nav li:hover {
-    background-color: transparent;
-}
-
-.side-nav li:first-child {
-    margin-left: 0;
-}
-
-.side-nav li a {
-    color: #727272;
-    padding: 25px 0;
-    border-bottom: 6px solid transparent;
-    text-transform: uppercase;
-    background-color: transparent;
-    line-height: 24px;
-    -webkit-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
-}
-
-.side-nav  li.current a,
-.side-nav  li a:hover {
-    background-color: transparent;
-}
-
-.side-nav li i {
-    display: none;
-}
-
-.static-menu {
-    margin-left: 40px;
-}
-.static-menu li:hover {
-    background-color: transparent;
-}
-
-.static-menu li a {
-    line-height: 27px;
-    padding: 22px 0;
-    font-size: 25px;
-    color: #727272;
-    border-bottom: 6px solid transparent;
-    background-color: transparent;
-}
-
-.static-menu li i:hover,
-.static-menu li a:hover {
-    background-color: transparent;
-}
-
-.static-menu li a i {
-    line-height: inherit;
-    height: inherit;
-    font-size: inherit;
-    float: none!important;
-    margin: 0;
-    vertical-align: middle;
-}
-
-.static-menu li:last-child {
-    margin-left: 12px;
-}
-
-.static-menu {}
-.static-menu form {
-    width: 300px;
-    position: relative;
-    height: 80px;
-    max-width: 100%;
-    padding-left: 35px;
-}
 
 #initSearchIcon {
     cursor: pointer;
 }
 
-.static-menu .search {
+.navbar-fixed .search {
     width: 100%;
     margin-bottom: 0;
     color: #212121;
@@ -510,33 +391,14 @@ header.nav.hide-menu {
     padding: 13px 0px;
 }
 
-.static-menu .search,
-.static-menu .search:hover,
-.static-menu .search:focus,
-.static-menu .search:active {
+.navbar-fixed .search,
+.navbar-fixed .search:hover,
+.navbar-fixed .search:focus,
+.navbar-fixed .search:active {
     border: none;
     box-shadow: none;
 }
 
-
-.static-menu form button {
-    line-height: inherit;
-    height: inherit;
-    border: none;
-    padding: 0;
-    font-size: 14px;
-    background-color: transparent;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.static-menu form i {
-    height: inherit;
-    line-height: inherit;
-    font-size: 26px;
-    color: #727272;
-}
 
 .submenu-ul {
     min-width: 170px;
