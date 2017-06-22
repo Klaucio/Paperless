@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
     <!-- Favicon-->
-    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
 
     <!-- Stylesheets -->
     {{--<link rel="stylesheet" href="/css/normalize.css">--}}
@@ -143,7 +143,7 @@
     <li class="user-area">
         <div class="userView">
             <div class="background">
-                <img class="responsive-img" style="" src="/img/ponte-ane.jpg">
+                <img class="responsive-img" style="" src="/img/logo.png">
             </div>
             <a href="#!user"><i class="material-icons large black-text">account_circle</i></a>
             <a href="#!name"><span class="name blue-text"> Nome do User </span></a>
