@@ -81,7 +81,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image-1.png" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{'img'}}/profile-image-1.png" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
@@ -93,7 +93,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image-3.jpg" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{'img'}}/profile-image-3.jpg" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
@@ -105,7 +105,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image.png" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{'img'}}/profile-image.png" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
