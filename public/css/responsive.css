@@ -84,16 +84,6 @@ TOC :
         border: none;
     }
 
-
-    nav a.button-collapse {
-        color: #727272;
-        float: left;
-        left: 0;
-        position: absolute;
-        top: 8px;
-        z-index: 99;
-    }
-
     ul.side-nav {
         z-index: 999;
     }

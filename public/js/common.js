@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 // callback after loading the window
-$(window).load(function(){
+$(window).on('load', function(){
 
 	// Preloader
     $('.loader').fadeOut();    
