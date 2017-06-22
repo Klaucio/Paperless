@@ -14,16 +14,16 @@
     <meta name="author" content="Steelcoders" />
 
     <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
-    <script src="{{ url('quickadmin/js') }}/bootstrap.min.js"></script>
+    {{--<link type="text/css" rel="stylesheet" href="{{'assets/plugins/materialize/css'}}/materialize.min.css"/>--}}
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
-    <link href="assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
+    <link href="{{'css'}}/MetroJs.min.css" rel="stylesheet">
+    <link href="{{'css'}}/weather-icons.min.css" rel="stylesheet">
 
 
     <!-- Theme Styles -->
-    <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="{{'css'}}/alpha.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{'css'}}/custom.css" rel="stylesheet" type="text/css"/>
 
 
 
@@ -278,23 +278,23 @@
 
 
 <!-- Javascripts -->
-<script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-<script src="assets/plugins/materialize/js/materialize.min.js"></script>
-<script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-<script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-<script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/plugins/counter-up-master/jquery.counterup.min.js"></script>
-<script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-<script src="assets/plugins/chart.js/chart.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.symbol.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="assets/plugins/curvedlines/curvedLines.js"></script>
-<script src="assets/plugins/peity/jquery.peity.min.js"></script>
-<script src="assets/js/alpha.min.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
+<script src="{{ url('js')}}/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script src="{{ url('js')}}/materialPreloader.min.js"></script>
+<script src="{{ url('js')}}/jquery.blockui.js"></script>
+<script src="{{ url('js')}}/jquery.waypoints.min.js"></script>
+<script src="{{ url('js')}}/jquery.counterup.min.js"></script>
+<script src="{{ url('js')}}/jquery.sparkline.min.js"></script>
+<script src="{{ url('js')}}/chart.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.time.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.symbol.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.resize.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.tooltip.min.js"></script>
+<script src="{{ url('js')}}/curvedLines.js"></script>
+<script src="{{ url('js')}}/jquery.peity.min.js"></script>
+<script src="{{ url('js')}}/alpha.min.js"></script>
+<script src="{{ url('js')}}/dashboard.js"></script>
 
 </body>
 
