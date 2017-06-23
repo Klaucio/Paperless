@@ -1782,11 +1782,11 @@ span.num {
     position: fixed;
     right: 20px;
     top: 80%;
-    background-color: #fff;
 }
 
 #show i {
     font-size: 20px;
+    color: #f8f8f8 !important;
 }
 
 #switch ul li:first-child a {

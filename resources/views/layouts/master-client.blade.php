@@ -109,8 +109,8 @@
     </div>
 </div>
 
-<div id="show" class="btn-floating waves-effect waves-light btn-large brand-text">
-    <i class="fa fa-plus"></i>
+<div id="show" class="btn-floating waves-effect waves-light btn-large brand-text green darken-3">
+    <i class="fa fa-plus white-text"></i>
 </div>
 
 
