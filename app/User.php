@@ -30,10 +30,10 @@ class User extends Authenticatable
     public $timestamps=true;
 
     public function instituicao(){
-        return $this->belongsTo(Instituicao::class,'instituicao_id');
+        return $this->belongsTo('App\Instituicao','instituicao_id');
     }
     public function disciplinas(){
-        return $this->belongsToMany(Disciplina::class);
+        return $this->belongsToMany('App\Disciplina');
 //        ,'disciplina_user','user_id','disciplina_id'
     }
 }

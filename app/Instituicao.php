@@ -11,6 +11,6 @@ class Instituicao extends Model
     public $timestamps=true;
 
     public function users(){
-        return $this->hasMany(User::class);
+        return $this->hasMany('App\User');
     }
 }

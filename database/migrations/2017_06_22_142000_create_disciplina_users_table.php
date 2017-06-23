@@ -13,7 +13,7 @@ class CreateDisciplinaUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('disciplina_users', function (Blueprint $table) {
+        Schema::create('disciplina_user', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('disciplina_id')->unsigned();
             $table->integer('user_id')->unsigned();

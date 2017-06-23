@@ -11,10 +11,10 @@ class Disciplina extends Model
     public $timestamps=true;
 
     public function area(){
-        return $this->belongsTo(Area::class);
+        return $this->belongsTo('App\Area');
     }
     public function users(){
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany('App\User');
 //        ,'disciplina_user','disciplina_id','user_id'
     }
 }
