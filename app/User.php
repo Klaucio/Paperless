@@ -33,7 +33,11 @@ class User extends Authenticatable
         return $this->belongsTo('App\Instituicao','instituicao_id');
     }
     public function disciplinas(){
-        return $this->belongsToMany('App\Disciplina');
+        return $this->belongsToMany('App\Disciplina','disciplina_user','user_id','disciplina_id');
+//        ,'disciplina_user','user_id','disciplina_id'
+    }
+    public function material(){
+        return $this->belongsToMany('App\Disciplina','material','user_id','disciplina_id');
 //        ,'disciplina_user','user_id','disciplina_id'
     }
 }
