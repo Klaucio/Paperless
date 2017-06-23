@@ -30,7 +30,7 @@
                 <div class="container">
                     <div class="row">
                         <a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-up btn-hidden" data-section="#about">
-                            <i class="mdi-navigation-expand-more"></i>
+                            <i class="material-icons">keyboard_arrow_down</i>
                         </a>
                     </div>
                 </div>
@@ -44,61 +44,53 @@
     <section id="about" class="scroll-section root-sec padd-tb-60 grey lighten-5 about-wrap">
         <div class="container">
             <div class="row">
-                <div class="clearfix about-inner">
-
-                    <div class="col s12 m4">
-                        <div class="person-about">
-                            <h3 class="about-subtitle">My Story</h3>
-                            <p>Hello, I’m a UI/UX Designer &amp; Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University. <br />
-                                And scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                            <a class="waves-effect waves-light btn-large brand-bg white-text"><i class="mdi-content-archive left"></i> Download Resume</a>
-                        </div>
+                <div class="col s12 l8 offset-l2">
+                    <div class="center-heading">
+                        <h2 class="title">Overview</h2>
+                        <span class="center-line red"></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit<br> sed do eiusmod tempor incididunt</p>
                     </div>
-                    <!-- about me description -->
-
-                    <div class="col s6 m4">
-                        <div class="person-img wow fadeIn">
-                            <img class="z-depth-1" src="img/person.jpg" alt="">
-                        </div>
-                    </div>
-                    <!-- about me image -->
-
-                    <div class="col s6 m4">
-                        <div class="person-info">
-                            <h3 class="about-subtitle">Personal Information</h3>
-                            <h5><span>Name :</span> John Doe</h5>
-                            <h5><span>Age :</span> 25 Years</h5>
-                            <h5><span>Phone :</span> +0123456789</h5>
-                            <h5><span>Email :</span> email@domain.com</h5>
-                            <h5><span>Address :</span> Dhaka, Bangladesh</h5>
-                        </div>
-
-                        <div class="about-social">
-                            <ul>
-                                <li>
-                                    <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-pinterest"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- about me info -->
-
                 </div>
             </div>
-        </div>
-        <!-- .container end -->
+            <div class="row center">
+                <div class="col s12 m6 l3">
+                    <div class="card-panel overview-section-box wow fadeIn" data-wow-delay="0.1s">
+                        <i class="ion-ios-book trans-effect"></i>
+                        <h3>Manuais de Apoio </h3>
+                        <p>
+                            Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta.
+                        </p>
+                    </div>
+                </div><!-- Col ends -->
+                <div class="col s12 m6 l3">
+                    <div class="card-panel overview-section-box wow fadeIn" data-wow-delay="0.2s">
+                        <i class="ion-help trans-effect"></i>
+                        <h3>Exercícios e Dúvidas</h3>
+                        <p>
+                            Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta.
+                        </p>
+                    </div>
+                </div><!-- Col ends -->
+                <div class="col s12 m6 l3">
+                    <div class="card-panel overview-section-box wow fadeIn" data-wow-delay="0.3s">
+                        <i class="ion-android-list trans-effect"></i>
+                        <h3> Sempre Actualizado </h3>
+                        <p>
+                            Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta.
+                        </p>
+                    </div>
+                </div><!-- Col ends -->
+                <div class="col s12 m6 l3">
+                    <div class="card-panel overview-section-box wow fadeIn" data-wow-delay="0.4s">
+                        <i class="ion-android-star-outline trans-effect"></i>
+                        <h3> Siga os Seus Favoritos </h3>
+                        <p>
+                            Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Donec id elit non mi porta.
+                        </p>
+                    </div>
+                </div><!-- Col ends -->
+            </div><!-- Row ends -->
+        </div><!-- Container ends -->
     </section>
     <!-- #about Section end -->
 
@@ -109,20 +101,163 @@
                 <div class="container">
                     <div class="row">
                         <div class="clearfix skill-inner">
-                            <div class="col s12 col m3">
+                            <div class="col s12">
                                 <div class="skill-left">
-                                    <h2 class="title">Titulo 1 </h2>
-                                    <p class="regular-text">Man behind the gun, any sophisticated weapons. Human remains that taking the role. We are experienced in utilizing all resources.</p>
+                                    <h2 class="title"> Discipinas </h2>
+                                    <p class="regular-text"> Siga as Disciplinas do Seu Interesse.</p>
+
+                                    <ul class="inline-menu col s6 clearfix portfolio-category" id="portfolio-msnry-sort">
+                                        <li class="active"><a href="#" data-target="*">Todas</a>
+                                        </li>
+                                        <li><a href="#" data-target=".category-1">Art</a>
+                                        </li>
+                                        <li><a href="#" data-target=".category-2">Accessories</a>
+                                        </li>
+                                        <li><a href="#" data-target=".category-3">Design</a>
+                                        </li>
+                                        <li><a href="#" data-target=".category-4">Fashion</a></li>
+                                    </ul>
+
+                                    <div class="input-field col s6">
+                                        <i class="material-icons prefix">search</i>
+                                        <input id="icon_prefix" type="text" class="validate">
+                                        <label for="icon_prefix">Buscar</label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Espaço -->
+                            <div id="portfolioModal" class="modal white">
+                                <div class="model-img"></div>
+                                <div class="modal-content">
+                                    <h2 class="title">Lorem ipsum dolor sit fugit dolore.</h2>
+                                    <p class="m-content">A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior.</p>
+                                </div>
+
+                                <div class="modal-footer">
+
+                                </div>
+                            </div>
+
+                            <!-- Espaço para Disciplinas -->
+                            <div class="portfolio-bottom col s12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="clearfix protfolio-item" id="protfolio-msnry">
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-1 category-3">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#"> <!-- Portfolio pop-up content-->
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf1.jpg" alt="portfolio"> <!-- portfolio thumbnail-->
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-2 category-1">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf2.jpg" alt="portfolio">
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-1 category-2">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf3.jpg" alt="portfolio">
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-3">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf4.jpg" alt="portfolio">
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-1 category-3 category-4">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf5.jpg" alt="portfolio">
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                                <!-- Single Portfolio-->
+                                                <li class="single-port-item category-2 category-4">
+                                                    <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="http://placehold.it/650x350" data-title="Your awesome portfolio title" data-content="A portfolio is a collection of documents and writing that you assemble in order to demonstrate that you have the appropriate prior." data-demo-link="#">
+                                                        <div class="protfolio-image">
+                                                            <img src="/img/pf6.jpg" alt="portfolio">
+                                                            <div class="protfolio-content waves-effect waves-block waves-light">
+                                                                <div class="protfolio-content__inner">
+                                                                    <h2 class="p-title">item name</h2>
+                                                                </div>
+                                                            </div>
+                                                            <div class="p-overlay"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!--/ single portfolio -->
+
+                                            </ul>
+                                            <!-- portfolio load more button-->
+                                            <a id="portfolio-item-loader" href="#" class="btn-floating btn-large waves-effect waves-light brand-bg"><i class="material-icons">add</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
 
                         </div>
                     </div>
                     <div class="btn-wrapp skl-ctrl">
-                        <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-left"><i class="mdi-navigation-chevron-left "></i></a>
-                        <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-right"><i class="mdi-navigation-chevron-right "></i></a>
+                        <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-left"><i class="material-icons">keyboard_arrow_left</i></a>
+                        <a class="btn-floating waves-effect waves-light btn-large brand-bg white-text go go-right"><i class="material-icons">keyboard_arrow_right</i></a>
                     </div>
                 </div>
             </div>
@@ -137,11 +272,11 @@
                             <div class="row">
                                 <div class="clearfix section-head experience-text">
                                     <div class="col s12">
-                                        <h2 class="title"> titulo 2 </h2>
+                                        <h2 class="title"> recomendado para si </h2>
                                         <p class="regular-text">Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.</p>
                                     </div>
                                 </div>
-                                <div class="col l12">
+                                <div class="col s12">
                                     <div class="overflow-hidden">
                                         <div class="row">
                                             <div id="experienceSlider" class="clearfix card-element-wrapper">
@@ -150,16 +285,16 @@
                                                         <div class="card-image waves-effect waves-block waves-light">
                                                             <h2 class="left-align card-title-top">January 2014 - Present</h2>
                                                             <div class="valign-wrapper card-img-wrap">
-                                                                <img class="activator" src="img/ghost_rider.jpg" alt="">
+                                                                <img class="activator" src="/img/ghost_rider.jpg" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="card-content">
-                                                            <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-more-vert right"></i></span>
+                                                            <span class="card-title activator brand-text">UX/UI Designer <i class="material-icons right">more_vert</i></span>
                                                             <p>Apple.inc</p>
                                                         </div>
                                                         <div class="card-reveal">
                                                             <div class="rev-title-wrap">
-                                                                <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-close right"></i></span>
+                                                                <span class="card-title activator brand-text">UX/UI Designer <i class="material-icons right">close</i></i></span>
                                                                 <p>Apple.inc</p>
                                                             </div>
                                                             <p class="rev-content">
@@ -177,12 +312,12 @@
                                                             </div>
                                                         </div>
                                                         <div class="card-content">
-                                                            <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-more-vert right"></i></span>
+                                                            <span class="card-title activator brand-text">UX/UI Designer<i class="material-icons right">more_vert</i></span>
                                                             <p>Android One</p>
                                                         </div>
                                                         <div class="card-reveal">
                                                             <div class="rev-title-wrap">
-                                                                <span class="card-title activator brand-text">UX/UI Designer<i class="mdi-navigation-close right"></i></span>
+                                                                <span class="card-title activator brand-text">UX/UI Designer<i class="material-icons right">close</i></span>
                                                                 <p>Android One</p>
                                                             </div>
                                                             <p class="rev-content">
@@ -267,8 +402,8 @@
                             </div>
                         </div>
                         <div class="btn-wrapp exp-ctrl">
-                            <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="mdi-navigation-chevron-left brand-text"></i></a>
-                            <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="mdi-navigation-chevron-right brand-text"></i></a>
+                            <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i class="material-icons black-text">keyboard_arrow_left</i></a>
+                            <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i class="material-icons black-text">keyboard_arrow_right</i></a>
                         </div>
                     </div>
                 </div>
@@ -287,7 +422,7 @@
                                         <p class="regular-text">Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.</p>
                                     </div>
                                 </div>
-                                <div class="col l12">
+                                <div class="col s12">
                                     <div class="overflow-hidden">
                                         <div class="row">
                                             <div id="educationSlider" class="clearfix card-element-wrapper">
@@ -298,17 +433,17 @@
                                                         <div class="card-image waves-effect waves-block waves-light">
                                                             <h2 class="left-align card-title-top">20011 - 2012</h2>
                                                             <div class="card-img-wrap">
-                                                                <img class="activator" src="img/grad-cap.png" alt="">
+                                                                <img class="activator" src="/img/grad-cap.png" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="card-content">
-                                                            <span class="card-title activator brand-text">Masters of Science<i class="mdi-navigation-more-vert right"></i></span>
+                                                            <span class="card-title activator brand-text">Masters of Science<i class="material-icons right">more_vert</i></span>
                                                             <p>Oxford University</p>
                                                         </div>
                                                         <!-- Reveal content-->
                                                         <div class="card-reveal">
                                                             <div class="rev-title-wrap">
-                                                                <span class="card-title activator brand-text">Masters of Science<i class="mdi-navigation-close right"></i></span>
+                                                                <span class="card-title activator brand-text">Masters of Science<i class="material-icons right">close</i></span>
                                                                 <p>Oxford University</p>
                                                             </div>
                                                             <p class="rev-content">
@@ -324,16 +459,16 @@
                                                         <div class="card-image waves-effect waves-block waves-light">
                                                             <h2 class="left-align card-title-top">2005 - 2007</h2>
                                                             <div class="card-img-wrap">
-                                                                <img class="activator" src="img/grad-cap.png" alt="">
+                                                                <img class="activator" src="/img/grad-cap.png" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="card-content">
-                                                            <span class="card-title activator brand-text">Bachelor of Science<i class="mdi-navigation-more-vert right"></i></span>
+                                                            <span class="card-title activator brand-text">Bachelor of Science<i class="material-icons right">more_vert</i></span>
                                                             <p>Oxford University</p>
                                                         </div>
                                                         <div class="card-reveal">
                                                             <div class="rev-title-wrap">
-                                                                <span class="card-title activator brand-text">Bachelor of Science<i class="mdi-navigation-close right"></i></span>
+                                                                <span class="card-title activator brand-text">Bachelor of Science<i class="material-icons right">close</i></span>
                                                                 <p>Oxford University</p>
                                                             </div>
                                                             <p class="rev-content">
@@ -349,16 +484,16 @@
                                                         <div class="card-image waves-effect waves-block waves-light">
                                                             <h2 class="left-align card-title-top">2005 - 2007</h2>
                                                             <div class="card-img-wrap">
-                                                                <img class="activator" src="img/grad-cap.png" alt="">
+                                                                <img class="activator" src="/img/grad-cap.png" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="card-content">
-                                                            <span class="card-title activator brand-text">A Level<i class="mdi-navigation-more-vert right"></i></span>
+                                                            <span class="card-title activator brand-text">A Level<i class="material-icons right">more_vert</i></span>
                                                             <p>Oxford College</p>
                                                         </div>
                                                         <div class="card-reveal">
                                                             <div class="rev-title-wrap">
-                                                                <span class="card-title activator brand-text">A Level<i class="mdi-navigation-close right"></i></span>
+                                                                <span class="card-title activator brand-text">A Level<i class="material-icons right">close</i></span>
                                                                 <p>Oxford College</p>
                                                             </div>
                                                             <p class="rev-content">
@@ -374,7 +509,7 @@
                                                         <div class="card-image waves-effect waves-block waves-light">
                                                             <h2 class="left-align card-title-top">1995 - 2005</h2>
                                                             <div class="card-img-wrap">
-                                                                <img class="activator" src="img/grad-cap.png" alt="">
+                                                                <img class="activator" src="/img/grad-cap.png" alt="">
                                                             </div>
                                                         </div>
                                                         <div class="card-content">

@@ -529,11 +529,12 @@ $(window).on('load', function(){
 		$('#protfolio-msnry').delegate('a.modal-trigger', 'click', function(e){
 			e.preventDefault();
 			var $this = $(this);
-			portfolioModal.openModal({
+
+			portfolioModal.modal({
 				dismissible: true,
 				opacity: '.4',
-				in_duration: 400,
-				out_duration: 400,
+				inDuration: 400,
+				outDuration: 400,
 				ready: function() {
 					var imgSrc = $this.data('image-source'),
 					title = $this.data('title'),
@@ -549,6 +550,8 @@ $(window).on('load', function(){
 					portTitle.text(title);
 					portContent.text(content);
 					portLink.attr('href', demoLink);
+
+
 				}
 			});
 		});
