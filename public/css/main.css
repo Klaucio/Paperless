@@ -822,6 +822,7 @@ section.brand-bg .title {
 .portfolio-category li {
     float: left;
     margin-right: 25px;
+    margin-top: 20px;
 }
 .portfolio-category li a {
     display: block;
@@ -846,7 +847,7 @@ section.brand-bg .title {
 }
 .protfolio-item li {
     float: left;
-    width: 33%;
+    width: 45%;
     margin-right: .33%;
     margin-bottom: .33%;
 }

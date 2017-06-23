@@ -63,6 +63,7 @@
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
     <![endif]-->
+    @yield('css')
 </head>
 
 <body>
@@ -236,5 +237,7 @@
 <script src="/libs/sweetalert/sweet-alert.min.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/jquery.searchable.js"></script>
+@yield('js')
 </body>
 </html>
