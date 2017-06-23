@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/teste', function () {
     return view('layouts/master');
 });
+
+
+Auth::routes();
