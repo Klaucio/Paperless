@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Disciplina extends Model
 {
     //
-    protected $fillable=['id','designacao','abreviatura'];
+    protected $fillable=['id','designacao','abreviatura','area_id'];
     public $timestamps=true;
 
     public function area(){

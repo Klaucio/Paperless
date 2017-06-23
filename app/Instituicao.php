@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Instituicao extends Model
 {
     //
-    protected $fillable=['id','designacao','abreviatura'];
-    public $timestamps=true;
+    public $timestamps = true;
+    protected $fillable = ['id', 'designacao', 'abreviatura'];
 
-    public function users(){
+    public function users()
+    {
         return $this->hasMany('App\User');
     }
 }
