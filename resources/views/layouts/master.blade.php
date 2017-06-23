@@ -15,18 +15,17 @@
 
     <!-- Styles -->
     {{--<link type="text/css" rel="stylesheet" href="{{'assets/plugins/materialize/css'}}/materialize.min.css"/>--}}
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
+    {{--<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>--}}
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="{{'css'}}/MetroJs.min.css" rel="stylesheet">
-    <link href="{{'css'}}/weather-icons.min.css" rel="stylesheet">
-    {{--<link href="{{'css'}}/materialize.min.css" rel="stylesheet">--}}
-
+    {{--<link href="{{'css'}}/MetroJs.min.css" rel="stylesheet">--}}
+    {{--<link href="{{'css'}}/weather-icons.min.css" rel="stylesheet">--}}
+    <link href="{{'css'}}/materialize.min.css" rel="stylesheet">
+    <link href="{{'css'}}/materialPreloader.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{'css'}}/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Theme Styles -->
     <link href="{{'css'}}/alpha.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{{'css'}}/custom.css" rel="stylesheet" type="text/css"/>
-
-
+    {{--<link href="{{'css'}}/custom.css" rel="stylesheet" type="text/css"/>--}}
 
 
 </head>
@@ -46,15 +45,15 @@
             </div>
             <form class="left search col s6 hide-on-small-and-down">
                 <div class="input-field">
-                    <input id="search" type="search" placeholder="Search" autocomplete="off">
+                    <input id="search" type="search" placeholder="procurar..." autocomplete="off">
                     <label for="search"><i class="material-icons search-icon">search</i></label>
                 </div>
-                <a href="javascript: void(0)" class="close-search"><i class="material-icons">close</i></a>
+                <a href="javascript: void(0)" class="close-search"><i class="material-icons">fechar</i></a>
             </form>
             <ul class="right col s9 m3 nav-right-menu">
                 <li><a href="javascript:void(0)" data-activates="chat-sidebar" class="chat-button show-on-large"><i class="material-icons">more_vert</i></a></li>
                 <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i><span class="badge">4</span></a></li>
-                <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">procurar...</i></a></li>
             </ul>
 
             <ul id="dropdown1" class="dropdown-content notifications-dropdown">
@@ -249,10 +248,15 @@
     </div>
 </div>
 
+{{--<div class="col s10 m10 16">--}}
+    {{--@yield('content')--}}
+{{--</div>--}}
+
 <div class="container">
 @yield('content')
 
 </div>
+
 
 
 <aside id="slide-out" class="side-nav white fixed">
@@ -263,8 +267,8 @@
             </div>
             <div class="sidebar-profile-info">
                 <a href="javascript:void(0);" class="account-settings-link">
-                    <p>David Doe</p>
-                    <span>david@gmail.com<i class="material-icons right">arrow_drop_down</i></span>
+                    <p>Frankstein</p>
+                    <span>frankstein@gmail.com<i class="material-icons right">arrow_drop_down</i></span>
                 </a>
             </div>
         </div>
@@ -289,21 +293,22 @@
             </ul>
         </div>
         <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-            <li class="no-padding active"><a class="waves-effect waves-grey active" href="index-2.html"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
+            <li class="no-padding active"><a class="waves-effect waves-grey active" href="{{url('teste')}}"><i class="material-icons">home</i>Dashboard</a></li>
             <li class="no-padding">
-                <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Apps<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">school</i>Instituicao<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="mailbox.html">Mailbox</a></li>
-                        <li><a href="search.html">Search</a></li>
-                        <li><a href="todo.html">Todo</a></li>
+                        <li><a href="{{url('universidades')}}">Universidades</a></li>
+                        <li><a href="mailbox.html">Faculdades</a></li>
+                        <li><a href="search.html">Departamentos</a></li>
+                        <li><a href="todo.html">Cursos</a></li>
                     </ul>
                 </div>
             </li>
 
 
             <li class="no-padding">
-                <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">mode_edit</i>Forms<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Utilizadores<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="form-elements.html">Form Elements</a></li>
@@ -317,29 +322,6 @@
                 </div>
             </li>
 
-
-            <li class="no-padding">
-                <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">tag_faces</i>Extra Pages<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="404.html">404 Page</a></li>
-                        <li><a href="500.html">500 Page</a></li>
-                        <li><a href="invoice.html">Invoice</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="sign-in.html">Sign In</a></li>
-                        <li><a href="sign-up.html">Sign Up</a></li>
-                        <li><a href="lock-screen.html">Lock Screen</a></li>
-                        <li><a href="pattern-lock-screen.html">Pattern Lock Screen</a></li>
-                        <li><a href="forgot.html">Forgot Password</a></li>
-                        <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                    </ul>
-                </div>
-            </li>
         </ul>
         <div class="footer">
             <p class="copyright">FuturoDigital ©</p>
@@ -352,25 +334,27 @@
 
 
 <!-- Javascripts -->
-<script src="{{ url('js')}}/jquery-2.2.0.min.js"></script>
+{{--<script src="{{ url('js')}}/jquery-2.2.0.min.js"></script>--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 {{--<script src="{{ url('js')}}/materialize.min.js"></script>--}}
-<script src="{{ url('js')}}/materialPreloader.min.js"></script>
-<script src="{{ url('js')}}/jquery.blockui.js"></script>
-<script src="{{ url('js')}}/jquery.waypoints.min.js"></script>
-<script src="{{ url('js')}}/jquery.counterup.min.js"></script>
-<script src="{{ url('js')}}/jquery.sparkline.min.js"></script>
-<script src="{{ url('js')}}/chart.min.js"></script>
-<script src="{{ url('js')}}/jquery.flot.min.js"></script>
-<script src="{{ url('js')}}/jquery.flot.time.min.js"></script>
-<script src="{{ url('js')}}/jquery.flot.symbol.min.js"></script>
-<script src="{{ url('js')}}/jquery.flot.resize.min.js"></script>
-<script src="{{ url('js')}}/jquery.flot.tooltip.min.js"></script>
-<script src="{{ url('js')}}/curvedLines.js"></script>
-<script src="{{ url('js')}}/jquery.peity.min.js"></script>
+{{--<script src="{{ url('js')}}/materialPreloader.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.blockui.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.waypoints.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.counterup.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.sparkline.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/chart.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.flot.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.flot.time.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.flot.symbol.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.flot.resize.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.flot.tooltip.min.js"></script>--}}
+{{--<script src="{{ url('js')}}/curvedLines.js"></script>--}}
+{{--<script src="{{ url('js')}}/jquery.peity.min.js"></script>--}}
 <script src="{{ url('js')}}/alpha.min.js"></script>
 <script src="{{ url('js')}}/dashboard.js"></script>
-
+<script src="{{ url('js')}}/jquery.dataTables.min.js"></script>
+<script src="{{ url('js')}}/table-data.js"></script>
 </body>
 
 </html>

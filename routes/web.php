@@ -17,3 +17,10 @@ Route::get('/', function () {
 Route::get('/teste', function () {
     return view('layouts/master');
 });
+Route::get('/univer', function () {
+    return view('admin/universidades/create');
+});
+Route::get('/listuniver', function () {
+    return view('admin/universidades/index');
+});
+Route::resource('universidades','UniversidadeController');
