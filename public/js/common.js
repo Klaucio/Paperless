@@ -29,7 +29,7 @@ $(document).ready(function(){
 	});
 
 
-	$(".primary-nav .button-collapse").sideNav();
+	$(".button-collapse").sideNav();
 
 
 	// jwplayer video post

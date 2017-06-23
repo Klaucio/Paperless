@@ -1,15 +1,5 @@
 /*
 ====================================================
-* [Master Stylesheet]
-
-  Theme Name : MaterialX
-  Version    :  1.0
-  Author     :  Bdinfosys
-  Author URI :  http://themeforest.net/user/bdinfosys
-====================================================
-
-   TOC:
-  =======
 
   1. Primary Styles
 
@@ -40,6 +30,8 @@
   14. Footer Styles
 
   15. Custom Styles
+
+  16. Overview
 
 ===================================================== */
 
@@ -136,7 +128,6 @@ p {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #fff;
     font-weight: 400;
     background-color: #fafafa;
 }
@@ -831,10 +822,10 @@ section.brand-bg .title {
 .portfolio-category li {
     float: left;
     margin-right: 25px;
+    margin-top: 20px;
 }
 .portfolio-category li a {
     display: block;
-    color: #fff;
     text-transform: uppercase;
     text-decoration: none;
     padding-bottom: 10px;
@@ -848,7 +839,7 @@ section.brand-bg .title {
 
 .portfolio-category li.active a,
 .portfolio-category li a:hover {
-    border-color : #fff;
+    border-color : #686868;
 }
 
 .protfolio-item {
@@ -856,7 +847,7 @@ section.brand-bg .title {
 }
 .protfolio-item li {
     float: left;
-    width: 33%;
+    width: 45%;
     margin-right: .33%;
     margin-bottom: .33%;
 }
@@ -1791,12 +1782,12 @@ span.num {
     z-index: 9999;
     position: fixed;
     right: 20px;
-    top: 70%;
-    background-color: #fff;
+    top: 80%;
 }
 
 #show i {
     font-size: 20px;
+    color: #f8f8f8 !important;
 }
 
 #switch ul li:first-child a {
@@ -1926,4 +1917,44 @@ span.num {
 
 .menu-select [type="radio"]:not(:checked) + label:before {
     border-color: #999;
+}
+
+/* *****************************************************************
+ * 5. Overview Section
+ * ************************************************************** */
+
+.overview-section-box {
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.overview-section-box h3 {
+    margin: 15px 0;
+    font-weight: 300;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 38px;
+}
+.overview-section-box p {
+    margin-bottom: 0px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.overview-section-box i{
+    width:120px;
+    height: 120px;
+    display: inline-block;
+    line-height: 125px;
+    font-size: 60px;
+    color:#fff;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 4px;
+    background: #03a9f4;
+}
+.overview-section-box:hover i {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }

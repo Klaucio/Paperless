@@ -11,7 +11,7 @@ class Area extends Model
     public $timestamps=true;
 
     public function disciplinas(){
-        return $this->hasMany(Disciplina::class);
+        return $this->hasMany('App\Disciplina');
     }
 
 }

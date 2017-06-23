@@ -22,6 +22,8 @@
     {{--<link rel="stylesheet" href="/css/normalize.css">--}}
     <link rel="stylesheet" href="/font/font-awesome/css/font-awesome.min.css">
 
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css">
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -61,6 +63,7 @@
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
     <![endif]-->
+    @yield('css')
 </head>
 
 <body>
@@ -107,8 +110,8 @@
     </div>
 </div>
 
-<div id="show" class="btn-floating waves-effect waves-light btn-large brand-text">
-    <i class="fa fa-plus"></i>
+<div id="show" class="btn-floating waves-effect waves-light btn-large brand-text green darken-3">
+    <i class="fa fa-plus white-text"></i>
 </div>
 
 
@@ -138,35 +141,30 @@
 
 
 
+<ul class="inline-menu side-nav" id="mobile-demo">
 
-<ul class="side-nav" id="mobile-demo">
-    <li class="user-area">
-        <div class="userView">
-            <div class="background">
-                <img class="responsive-img" style="" src="/img/logo.png">
+    <!-- Mini Profile // only visible in Tab and Mobile -->
+    <li class="mobile-profile">
+        <div class="profile-inner">
+            <div class="pp-container">
+                <img src="/img/person.jpg" alt="">
             </div>
-            <a href="#!user"><i class="material-icons large black-text">account_circle</i></a>
-            <a href="#!name"><span class="name blue-text"> Nome do User </span></a>
+            <h3>User Name</h3>
+            <h5>Some Basic Info</h5>
         </div>
+    </li><!-- mini profile end-->
+
+
+    <li><a href="/home" data-section="#about" class="menu-smooth-scroll"><i class="fa fa-home fa-fw"></i>Início</a>
     </li>
-    <li class="pesquisar">
-        <nav class="white">
-            <div class="nav-wrapper">
-                <form>
-                    <div class="input-field">
-                        <input id="search" type="search" required>
-                        <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
-                </form>
-            </div>
-        </nav>
-    </li>
-    <li><a href="{{url('/home')}}" class="waves-effect black-text"><i class="material-icons">home</i>Inicio</a></li>
-    <li>
-        <div class="divider"></div>
+    <li><a href="#!" class="menu-smooth-scroll"></i>Link 1</a>
+    <li><a href="#!" class="menu-smooth-scroll"></i>Link 2</a>
+    <li><a href="#!" class="menu-smooth-scroll"></i>Link 3</a>
+    <li><a href="#!" class="menu-smooth-scroll"></i>Link 4</a>
     </li>
 </ul>
+
+
 
 <div class="navbar-fixed">
     <nav class="nav green darken-3">
@@ -176,8 +174,13 @@
             </a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
+                <li><a href="/home"><i class="material-icons left">home</i>Início</a></li>
+                <li><a href="#!">Link 1</a></li>
+                <li><a href="#!">Link 2</a></li>
+                <li><a href="#!">Link 3</a></li>
+                <li><a href="#!">Link 4</a></li>
                 <li><a class="dropdown-button" href="#!"><i class="material-icons">notifications</i></a></li>
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown-user"><i class="medium material-icons left">account_circle</i> nome do user<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown-user"><i class="medium material-icons left">account_circle</i> User Name<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
 
         </div>
@@ -234,5 +237,7 @@
 <script src="/libs/sweetalert/sweet-alert.min.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/jquery.searchable.js"></script>
+@yield('js')
 </body>
 </html>

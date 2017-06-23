@@ -85,7 +85,7 @@ TOC :
     }
 
     ul.side-nav {
-        z-index: 999;
+        z-index: 9999999;
     }
 
     .side-nav li:first-child, .side-nav li {
@@ -96,13 +96,6 @@ TOC :
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-
-    .side-nav li a {
-        text-transform: none;
-        line-height: 10px;
-        padding: 0;
-    }
-
     .side-nav li i {
         display: inline-block;
         font-size: 15px;
@@ -111,7 +104,7 @@ TOC :
     }
 
     .mobile-profile{
-        background: url('../../images/home-bg.jpg') no-repeat scroll center center / cover ;
+        background: url('/img/home-bg.jpg') no-repeat scroll center center / cover ;
         display: block;
         min-height: 160px;
         position: relative;

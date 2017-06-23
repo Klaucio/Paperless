@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Disciplina extends Model
 {
     //
-    protected $fillable=['id','designacao','abreviatura'];
+    protected $fillable=['id','designacao','abreviatura','area_id'];
     public $timestamps=true;
 
     public function area(){
-        return $this->belongsTo(Area::class);
+        return $this->belongsTo('App\Area');
     }
     public function users(){
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany('App\User');
 //        ,'disciplina_user','disciplina_id','user_id'
     }
 }
