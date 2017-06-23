@@ -14,16 +14,17 @@
     <meta name="author" content="Steelcoders" />
 
     <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
-    <script src="{{ url('quickadmin/js') }}/bootstrap.min.js"></script>
+    {{--<link type="text/css" rel="stylesheet" href="{{'assets/plugins/materialize/css'}}/materialize.min.css"/>--}}
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
-    <link href="assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
+    <link href="{{'css'}}/MetroJs.min.css" rel="stylesheet">
+    <link href="{{'css'}}/weather-icons.min.css" rel="stylesheet">
+    {{--<link href="{{'css'}}/materialize.min.css" rel="stylesheet">--}}
 
 
     <!-- Theme Styles -->
-    <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="{{'css'}}/alpha.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{'css'}}/custom.css" rel="stylesheet" type="text/css"/>
 
 
 
@@ -41,7 +42,7 @@
                 </a>
             </section>
             <div class="header-title col s3 m3">
-                <span class="chapter-title">Alpha</span>
+                <span class="chapter-title">Iboot | Paperless</span>
             </div>
             <form class="left search col s6 hide-on-small-and-down">
                 <div class="input-field">
@@ -54,6 +55,79 @@
                 <li><a href="javascript:void(0)" data-activates="chat-sidebar" class="chat-button show-on-large"><i class="material-icons">more_vert</i></a></li>
                 <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i><span class="badge">4</span></a></li>
                 <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+            </ul>
+
+            <ul id="dropdown1" class="dropdown-content notifications-dropdown">
+                <li class="notificatoins-dropdown-container">
+                    <ul>
+                        <li class="notification-drop-title">Today</li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle cyan"><i class="material-icons">done</i></div>
+                                    <div class="notification-text"><p><b>Alan Grey</b> uploaded new theme</p><span>7 min ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle deep-purple"><i class="material-icons">cached</i></div>
+                                    <div class="notification-text"><p><b>Tom</b> updated status</p><span>14 min ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle red"><i class="material-icons">delete</i></div>
+                                    <div class="notification-text"><p><b>Amily Lee</b> deleted account</p><span>28 min ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle cyan"><i class="material-icons">person_add</i></div>
+                                    <div class="notification-text"><p><b>Tom Simpson</b> registered</p><span>2 hrs ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle green"><i class="material-icons">file_upload</i></div>
+                                    <div class="notification-text"><p>Finished uploading files</p><span>4 hrs ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification-drop-title">Yestarday</li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle green"><i class="material-icons">security</i></div>
+                                    <div class="notification-text"><p>Security issues fixed</p><span>16 hrs ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle indigo"><i class="material-icons">file_download</i></div>
+                                    <div class="notification-text"><p>Finished downloading files</p><span>22 hrs ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <div class="notification">
+                                    <div class="notification-icon circle cyan"><i class="material-icons">code</i></div>
+                                    <div class="notification-text"><p>Code changes were saved</p><span>1 day ago</span></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
 
 
@@ -81,7 +155,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image-1.png" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{url('img')}}/profile-image-1.png" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
@@ -93,7 +167,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image-3.jpg" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{url('img')}}/profile-image-3.jpg" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
@@ -105,7 +179,7 @@
                 <div class="card card-transparent">
                     <div class="row valign-wrapper">
                         <div class="col s3">
-                            <img src="assets/images/profile-image.png" alt="" class="circle responsive-img z-depth-1">
+                            <img src="{{url('img')}}/profile-image.png" alt="" class="circle responsive-img z-depth-1">
                         </div>
                         <div class="col s9">
                                         <span class="search-result-text">
@@ -185,7 +259,7 @@
     <div class="side-nav-wrapper">
         <div class="sidebar-profile">
             <div class="sidebar-profile-image">
-                <img src="assets/images/profile-image.png" class="circle" alt="">
+                <img src="{{url('img')}}/profile-image.png" class="circle" alt="">
             </div>
             <div class="sidebar-profile-info">
                 <a href="javascript:void(0);" class="account-settings-link">
@@ -278,23 +352,24 @@
 
 
 <!-- Javascripts -->
-<script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
-<script src="assets/plugins/materialize/js/materialize.min.js"></script>
-<script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
-<script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
-<script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/plugins/counter-up-master/jquery.counterup.min.js"></script>
-<script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-<script src="assets/plugins/chart.js/chart.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.symbol.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
-<script src="assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="assets/plugins/curvedlines/curvedLines.js"></script>
-<script src="assets/plugins/peity/jquery.peity.min.js"></script>
-<script src="assets/js/alpha.min.js"></script>
-<script src="assets/js/pages/dashboard.js"></script>
+<script src="{{ url('js')}}/jquery-2.2.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+{{--<script src="{{ url('js')}}/materialize.min.js"></script>--}}
+<script src="{{ url('js')}}/materialPreloader.min.js"></script>
+<script src="{{ url('js')}}/jquery.blockui.js"></script>
+<script src="{{ url('js')}}/jquery.waypoints.min.js"></script>
+<script src="{{ url('js')}}/jquery.counterup.min.js"></script>
+<script src="{{ url('js')}}/jquery.sparkline.min.js"></script>
+<script src="{{ url('js')}}/chart.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.time.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.symbol.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.resize.min.js"></script>
+<script src="{{ url('js')}}/jquery.flot.tooltip.min.js"></script>
+<script src="{{ url('js')}}/curvedLines.js"></script>
+<script src="{{ url('js')}}/jquery.peity.min.js"></script>
+<script src="{{ url('js')}}/alpha.min.js"></script>
+<script src="{{ url('js')}}/dashboard.js"></script>
 
 </body>
 
