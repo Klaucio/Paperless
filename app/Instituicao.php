@@ -14,4 +14,7 @@ class Instituicao extends Model
     {
         return $this->hasMany('App\User');
     }
+    public function disciplinas(){
+        return $this->hasMany('App\Faculdade');
+    }
 }
