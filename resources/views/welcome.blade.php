@@ -1,23 +1,33 @@
 @extends('layouts.master-client')
 
 
-@section('tittle')
+@section('title')
     Início
 @endsection
 
 @section('css')
     <style>
 
-        .card-disc .card-reveal {
-            padding: 16px;
+        .card-disc {
+            margin: 5px
         }
 
         .card .card-title {
             font-weight: 500;
             text-transform: capitalize !important;
         }
+
+        .card .card-action {
+            padding: 24px 30px;
+            height: 70px;
+        }
+
+        .preloader-wrapper.small {
+            width: 30px;
+            height: 30px;
+        }
     </style>
-    @endsection
+@endsection
 
 
 @section('content')
@@ -135,9 +145,10 @@
                                         <li class="active"><a class="green-text" href="#" data-target="*">Todas</a>
                                         </li>
                                         @foreach($areas as $area)
-                                            <li><a href="#" class="green-text" data-target=".{{$area->id}}">{{$area->designacao}}</a>
+                                            <li><a href="#" class="green-text"
+                                                   data-target=".{{$area->id}}">{{$area->designacao}}</a>
                                             </li>
-                                    @endforeach
+                                        @endforeach
                                     </ul>
 
                                     <div class="input-field col s6">
@@ -178,24 +189,67 @@
                                                                 </div>
                                                                 <div class="card-stacked">
                                                                     <div class="card-content">
-                                                                        <a href="#" ><span class="card-title grey-text text-darken-4">{{$disciplina->designacao}}</span></a>
-                                                                        <p>I am a very simple card. I am good at containing</p>
+                                                                        <a href="#"><span
+                                                                                    class="card-title grey-text text-darken-4">{{$disciplina->designacao}}</span></a>
+                                                                        <p>I am a very simple card. I am good at
+                                                                            containing</p>
                                                                     </div>
                                                                     <div class="card-action">
-                                                                        <a href="#"> Seguir</a>
+                                                                        <div>
+                                                                            @if(Auth::check())
+                                                                                @if(Auth::user()->disciplinas->contains($disciplina->id))
+                                                                                    <a class="btn-unfollow"
+                                                                                       data-dsc="{{$disciplina->id}}"
+                                                                                       href="#"><i
+                                                                                                class="material-icons left">check_circle</i>Seguindo</a>
+                                                                                    <div id="pre{{$disciplina->id}}"
+                                                                                         class="preloader-wrapper small active hidden">
+                                                                                        <div class="spinner-layer spinner-green-only">
+                                                                                            <div class="circle-clipper left">
+                                                                                                <div class="circle"></div>
+                                                                                            </div>
+                                                                                            <div class="gap-patch">
+                                                                                                <div class="circle"></div>
+                                                                                            </div>
+                                                                                            <div class="circle-clipper right">
+                                                                                                <div class="circle"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                @endif
+                                                                            @else
+                                                                                <a class="btn-follow"
+                                                                                   data-dsc="{{$disciplina->id}}"
+                                                                                   href="#">Seguir</a>
+                                                                                <div id="pre{{$disciplina->id}}"
+                                                                                     class="preloader-wrapper small active hidden">
+                                                                                    <div class="spinner-layer spinner-green-only">
+                                                                                        <div class="circle-clipper left">
+                                                                                            <div class="circle"></div>
+                                                                                        </div>
+                                                                                        <div class="gap-patch">
+                                                                                            <div class="circle"></div>
+                                                                                        </div>
+                                                                                        <div class="circle-clipper right">
+                                                                                            <div class="circle"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            @endif
+
+
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </li>
-
                                                     @endforeach
                                                 @endforeach
-
                                             </ul>
                                             <!-- portfolio load more button-->
                                             <a id="portfolio-item-loader" href="#"
                                                class="btn-floating btn-large waves-effect waves-light brand-bg"><i
-                                                        class="material-icons">add</i></a>
+                                                        class="material-icons">keyboard_arrow_down</i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -553,17 +607,48 @@
 @section('js')
 
     <script>
-        $(document).ready( function() {
-            $( '.protfolio-item' ).searchable({
+        $(document).ready(function () {
+
+            $('.protfolio-item').searchable({
                 searchField: '#container-search',
                 selector: '.single-port-item',
                 childSelector: '.card',
-                show: function( elem ) {
+                show: function (elem) {
                     elem.slideDown(100);
                 },
-                hide: function( elem ) {
-                    elem.slideUp( 100 );
+                hide: function (elem) {
+                    elem.slideUp(100);
                 }
+            });
+
+            $('.btn-follow').on('click', function (e) {
+                e.preventDefault();
+
+                var $this = $(this);
+                $this.addClass('hidden');
+                $('#pre' + $this.data('dsc')).removeClass('hidden');
+
+//                alert($this.data('dsc'));
+
+                $.ajax({
+                    method: 'POST',
+                    url: '/seguir-disciplina',
+                    data: {'id': $this.data('dsc'), '_token': $('meta[name="csrf-token"]').attr('content')},
+                    success: function (data) {
+
+                        if (data.msg) {
+                            $('#pre' + $this.data('dsc')).addClass('hidden');
+                            $this.removeClass('hidden');
+                            $this.prepend('<i class="material-icons left">check_circle</i>');
+                            $this.text("Seguindo");
+                        }
+                        else if (!data.msg) {
+                            window.location.href = '/login'
+                        }
+                    }
+                });
+
+
             })
 
         })
