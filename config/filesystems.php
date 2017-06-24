@@ -64,10 +64,10 @@ return [
         ],
         'dropbox' => [
             'driver' => 'dropbox',
-            'app_secret' => env('mrfitbke10wxrqs'),
-            'token' => env('XBcbxusWooAAAAAAAAAAD5S1RH0HDc5exWRwhmUgpILDd-5GI4NR6yEENYQKEBkX'),
-            'prefix' => env(\Carbon\Carbon::now().'_'),
-            'app_url' => env('https://www.dropbox.com/developers/apps/info/r9ijux4xanxviqg'),
+            'app_secret' => env('DROPBOX_SECRET'),
+            'token' => env('DROPBOX_TOKEN'),
+//            'prefix' => env(\Carbon\Carbon::now().'_'),
+//            'app_url' => env('https://www.dropbox.com/developers/apps/info/r9ijux4xanxviqg'),
         ],
 
     ],
