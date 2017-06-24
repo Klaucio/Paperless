@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Dropbox
+        Jeylabs\Laravel\DropboxDriver\ServiceProvider::class,
+
     ],
 
     /*

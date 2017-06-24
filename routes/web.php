@@ -15,6 +15,8 @@ Route::get('/','HomeController@home');
 Route::get('/teste', function () {
     return view('layouts/master');
 });
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('/uploadfile','UploadFileController@showUploadFile');
 
 
 Auth::routes();
