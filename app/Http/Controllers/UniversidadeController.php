@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Instituicao;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class UniversidadeController extends Controller
      */
     public function index()
     {
-      return View('admin.universidades.index');
+        $universidades= Instituicao::all();
+      return view('admin.universidades.index',compact('universidades'));
     }
 
     /**
@@ -24,7 +26,7 @@ class UniversidadeController extends Controller
      */
     public function create()
     {
-        return View('admin.universidades.create');
+        return view('admin.universidades.create');
     }
 
     /**
@@ -35,7 +37,8 @@ class UniversidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $universidades=Instituicao::create(request()->all());
+        return redirect()->route('universidades.index');
     }
 
     /**
@@ -57,7 +60,9 @@ class UniversidadeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $universidades=Instituicao::findOrFail($id);
+//        dd($universidades);
+        return view('admin.universidades.edit',compact('universidades'));
     }
 
     /**
@@ -69,7 +74,10 @@ class UniversidadeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $universidade=Instituicao::find($id);
+        $universidade->fill($request->only(['designacao','abreviatura']));
+        $universidade->save();
+        return redirect()->route('universidades.index');
     }
 
     /**
@@ -80,6 +88,9 @@ class UniversidadeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $universidade=Instituicao::findOrFail($id);
+        dd($universidade);
+        $universidade->delete();
+        return back();
     }
 }

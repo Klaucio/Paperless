@@ -13,7 +13,7 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-        //
+       return view('admin.departamentos.index');
     }
 
     /**
@@ -23,7 +23,7 @@ class DepartamentoController extends Controller
      */
     public function create()
     {
-        //
+       return view('admin.departamentos.create');
     }
 
     /**

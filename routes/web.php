@@ -12,24 +12,15 @@
 */
 
 Route::get('/','HomeController@home');
-
-Route::get('/home','HomeController@index');
-
-Route::post('/seguir-disciplina','UserController@seguirDisciplina');
-
-Route::post('/criar-conta','UserController@criarConta');
-
-Route::get('/instituicoes','InstituicaoController@getInstituicoes');
-
-Route::resource('disciplina','DisciplinaController');
-
-Route::get('perfil','UserController@getPerfil');
-
-Route::get('/teste', function () {
+Route::get('/admin', function () {
     return view('layouts/master');
 });
-Route::get('/uploadfile','UploadFileController@index');
-Route::post('/uploadfile','UploadFileController@showUploadFile');
 
 
 Auth::routes();
+Route::resource('universidades','UniversidadeController');
+Route::resource('faculdades','FaculdadeController');
+Route::resource('departamentos','DepartamentoController');
+Route::resource('cursos','CursoController');
+Route::resource('categorias','CategoriaController');
+Route::resource('users','UserController');
