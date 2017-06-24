@@ -1,1 +1,47 @@
-/* Write your custom CSS here */
+
+.no-padding a {
+    margin-bottom: auto;
+}
+
+.side-nav li {
+    float: none;
+    line-height: 40px !important;
+}
+
+.side-nav li>a {
+    color: rgba(0,0,0,0.87);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px !important;
+    line-height: 40px !important;
+    padding: 0 32px;
+}
+.side-nav li a {
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+}
+.side-nav li a {
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+}
+.side-nav li>a {
+    color: rgba(0,0,0,0.87);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    /*padding: 0 32px;*/
+}
+.side-nav ul li a, .side-nav.fixed ul li a {
+    font-size: 13px;
+    height: auto!important;
+    color: rgba(0,0,0,.7);
+    padding: 5px 5px 5px 5px !important;
+    line-height: 40px!important;
+}
