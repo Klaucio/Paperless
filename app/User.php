@@ -36,7 +36,8 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Disciplina','disciplina_user','user_id','disciplina_id');
 //        ,'disciplina_user','user_id','disciplina_id'
     }
-    public function material(){
+
+    public function materiais(){
         return $this->belongsToMany('App\Disciplina','material','user_id','disciplina_id');
 //        ,'disciplina_user','user_id','disciplina_id'
     }

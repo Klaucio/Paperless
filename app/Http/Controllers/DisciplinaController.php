@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Disciplina;
 use Illuminate\Http\Request;
 
 class DisciplinaController extends Controller
@@ -45,7 +46,9 @@ class DisciplinaController extends Controller
      */
     public function show($id)
     {
-        //
+        $disciplina = Disciplina::find($id);
+
+        return view('disciplinas.show', compact('disciplina'));
     }
 
     /**

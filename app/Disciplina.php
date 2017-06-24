@@ -13,8 +13,14 @@ class Disciplina extends Model
     public function area(){
         return $this->belongsTo('App\Area');
     }
-    public function users(){
-        return $this->belongsToMany('App\User');
-//        ,'disciplina_user','disciplina_id','user_id'
+    public function seguidores(){
+        return $this->belongsToMany('App\User','disciplina_user','disciplina_id','user_id');
     }
+
+
+    public function materiais(){
+        return $this->belongsToMany('App\User','material','disciplina_id','user_id')->withPivot(['titulo'])->withTimestamps();
+    }
+
+
 }
