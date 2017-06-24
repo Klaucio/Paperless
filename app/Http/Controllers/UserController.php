@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
-class DepartamentoController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class DepartamentoController extends Controller
      */
     public function index()
     {
-       return view('admin.departamentos.index');
+        $users=User::all();
+        return view('admin.users.index',compact('users'));
     }
 
     /**
@@ -23,7 +25,7 @@ class DepartamentoController extends Controller
      */
     public function create()
     {
-       return view('admin.departamentos.create');
+        //
     }
 
     /**
@@ -56,7 +58,10 @@ class DepartamentoController extends Controller
      */
     public function edit($id)
     {
-        //
+       $users=User::findOrFail($id);
+        dd($users);
+        return view('admin.users.edit',compact('users'));
+
     }
 
     /**
@@ -79,6 +84,9 @@ class DepartamentoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user=User::findOrFail($id);
+//        dd($user->id);
+        $user->delete();
+        return redirect()->route('users');
     }
 }

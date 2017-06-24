@@ -12,9 +12,15 @@
 */
 
 Route::get('/','HomeController@home');
-Route::get('/teste', function () {
+Route::get('/admin', function () {
     return view('layouts/master');
 });
 
 
 Auth::routes();
+Route::resource('universidades','UniversidadeController');
+Route::resource('faculdades','FaculdadeController');
+Route::resource('departamentos','DepartamentoController');
+Route::resource('cursos','CursoController');
+Route::resource('categorias','CategoriaController');
+Route::resource('users','UserController');

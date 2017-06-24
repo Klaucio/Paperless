@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Faculdade;
 use Illuminate\Http\Request;
 
 class FaculdadeController extends Controller
@@ -13,7 +14,8 @@ class FaculdadeController extends Controller
      */
     public function index()
     {
-        //
+        $faculdades=Faculdade::all();
+       return view('admin.faculdades.index',compact('faculdades'));
     }
 
     /**
@@ -23,7 +25,7 @@ class FaculdadeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.faculdades.create');
     }
 
     /**

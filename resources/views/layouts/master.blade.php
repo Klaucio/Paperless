@@ -19,12 +19,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {{--<link href="{{'css'}}/MetroJs.min.css" rel="stylesheet">--}}
     {{--<link href="{{'css'}}/weather-icons.min.css" rel="stylesheet">--}}
-    <link href="{{'css'}}/materialize.min.css" rel="stylesheet">
-    <link href="{{'css'}}/materialPreloader.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{{'css'}}/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/materialPreloader.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Theme Styles -->
-    <link href="{{'css'}}/alpha.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/alpha.min.css" rel="stylesheet" type="text/css"/>
     {{--<link href="{{'css'}}/custom.css" rel="stylesheet" type="text/css"/>--}}
 
 
@@ -293,15 +293,15 @@
             </ul>
         </div>
         <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-            <li class="no-padding active"><a class="waves-effect waves-grey active" href="{{url('teste')}}"><i class="material-icons">home</i>Dashboard</a></li>
+            <li class="no-padding active"><a class="waves-effect waves-grey active" href="{{url('admin')}}"><i class="material-icons">home</i>Dashboard</a></li>
             <li class="no-padding">
                 <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">school</i>Instituicao<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="{{url('universidades')}}">Universidades</a></li>
-                        <li><a href="mailbox.html">Faculdades</a></li>
-                        <li><a href="search.html">Departamentos</a></li>
-                        <li><a href="todo.html">Cursos</a></li>
+                        <li><a href="{{url('faculdades')}}">Faculdades</a></li>
+                        <li><a href="{{url('departamentos')}}">Departamentos</a></li>
+                        <li><a href="{{url('cursos')}}">Cursos</a></li>
                     </ul>
                 </div>
             </li>
@@ -311,13 +311,9 @@
                 <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Utilizadores<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="form-elements.html">Form Elements</a></li>
-                        <li><a href="form-wizard.html">Form Wizard</a></li>
-                        <li><a href="form-upload.html">File Upload</a></li>
-                        <li><a href="form-image-crop.html">Image Crop</a></li>
-                        <li><a href="form-image-zoom.html">Image Zoom</a></li>
-                        <li><a href="form-input-mask.html">Input Mask</a></li>
-                        <li><a href="form-select2.html">Select2</a></li>
+                        <li><a href="form-elements.html">Roles</a></li>
+                        <li><a href="{{url('users')}}">Utilizadores</a></li>
+
                     </ul>
                 </div>
             </li>
@@ -351,10 +347,10 @@
 {{--<script src="{{ url('js')}}/jquery.flot.tooltip.min.js"></script>--}}
 {{--<script src="{{ url('js')}}/curvedLines.js"></script>--}}
 {{--<script src="{{ url('js')}}/jquery.peity.min.js"></script>--}}
-<script src="{{ url('js')}}/alpha.min.js"></script>
-<script src="{{ url('js')}}/dashboard.js"></script>
-<script src="{{ url('js')}}/jquery.dataTables.min.js"></script>
-<script src="{{ url('js')}}/table-data.js"></script>
+<script src="/js/alpha.min.js"></script>
+<script src="/js//dashboard.js"></script>
+<script src="/js//jquery.dataTables.min.js"></script>
+<script src="/js//table-data.js"></script>
 </body>
 
 </html>
