@@ -18,6 +18,9 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="/favicon.png">
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Stylesheets -->
     {{--<link rel="stylesheet" href="/css/normalize.css">--}}
     <link rel="stylesheet" href="/font/font-awesome/css/font-awesome.min.css">
@@ -41,7 +44,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="/css/animate.min.css" media="screen,projection"/>
-    <link rel="stylesheet" href="/libs/sweetalert/sweet-alert.css" media="screen,projection"/>
+
+    <link href="https://cdn.jsdelivr.net/sweetalert2/6.1.0/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.0/sweetalert2.min.js"></script>
+
 
     <link rel="stylesheet" href="/libs/owl-carousel/owl.carousel.css" media="screen,projection"/>
     <link rel="stylesheet" href="/libs/owl-carousel/owl.transitions.css" media="screen,projection"/>
@@ -135,24 +141,37 @@
             {{ csrf_field() }}
         </form>
     </li>
-    <li><a href="#!">Perfil</a></li>
-    <li ><a href="#!">Configuções</a></li>
+    <li><a href="/perfil">Perfil</a></li>
+    <li><a href="#!">Configuções</a></li>
 </ul>
-
 
 
 <ul class="inline-menu side-nav" id="mobile-demo">
 
+
+@if(Auth::check())
     <!-- Mini Profile // only visible in Tab and Mobile -->
-    <li class="mobile-profile">
-        <div class="profile-inner">
-            <div class="pp-container">
-                <img src="/img/person.jpg" alt="">
+        <li class="mobile-profile">
+            <div class="profile-inner">
+                <div class="pp-container">
+                    <img src="/img/avatar-default.png" alt="">
+                </div>
+                <h3>{{Auth::user()->name}}</h3>
+                <h5>Some Basic Info</h5>
             </div>
-            <h3>User Name</h3>
-            <h5>Some Basic Info</h5>
-        </div>
-    </li><!-- mini profile end-->
+        </li><!-- mini profile end-->
+@else
+    <!-- Mini Profile // only visible in Tab and Mobile -->
+        <li class="mobile-profile">
+            <div class="profile-inner">
+                <div class="pp-container">
+                    <img src="/img/avatar-default.png" alt="">
+                </div>
+                <h3>User Name</h3>
+                <h5>Some Basic Info</h5>
+            </div>
+        </li><!-- mini profile end-->
+    @endif
 
 
     <li><a href="/home" data-section="#about" class="menu-smooth-scroll"><i class="fa fa-home fa-fw"></i>Início</a>
@@ -163,7 +182,6 @@
     <li><a href="#!" class="menu-smooth-scroll"></i>Link 4</a>
     </li>
 </ul>
-
 
 
 <div class="navbar-fixed">
@@ -179,8 +197,16 @@
                 <li><a href="#!">Link 2</a></li>
                 <li><a href="#!">Link 3</a></li>
                 <li><a href="#!">Link 4</a></li>
-                <li><a class="dropdown-button" href="#!"><i class="material-icons">notifications</i></a></li>
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown-user"><i class="medium material-icons left">account_circle</i> User Name<i class="material-icons right">arrow_drop_down</i></a></li>
+
+                @if(Auth::check())
+                    <li><a class="dropdown-button" href="#!"><i class="material-icons">notifications</i></a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown-user"><i
+                                    class="medium material-icons left">account_circle</i>{{Auth::user()->name}}<i
+                                    class="material-icons right">arrow_drop_down</i></a></li>
+                @else
+                    <li><a href="/login">Login</a></li>
+
+                @endif
             </ul>
 
         </div>
@@ -234,10 +260,10 @@
 <script src="/js/jquery.nicescroll.min.js"></script>
 <script src="/libs/owl-carousel/owl.carousel.min.js"></script>
 <script src="/libs/jwplayer/jwplayer.js"></script>
-<script src="/libs/sweetalert/sweet-alert.min.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/jquery.searchable.js"></script>
+<script src="/js/init.js"></script>
 @yield('js')
 </body>
 </html>

@@ -6,10 +6,11 @@ $factory->define(App\Area::class, function (Faker\Generator $faker) {
 
     return [
         'designacao' => $faker->unique()->randomElement([
-            'Ciências Sociais',
+            'Ciências Socias e Aplicadas',
             'Educação',
-            'Ciências',
-            'Engenharia',
+            'Letras e Artes',
+            'Engenharias',
+            'Saúde',
             'Design',
             'Economia',
             'Filosofia',
@@ -17,6 +18,10 @@ $factory->define(App\Area::class, function (Faker\Generator $faker) {
             'Turismo',
             'Desporto',
             'Arquitectura',
+            'Ciências Agronómicas',
+            'Ciências Biológias',
+            'Ciências Humanas',
+            'Ciências Naturais e Exactass',
 
         ]),
     ];

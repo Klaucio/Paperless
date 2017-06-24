@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "14ebd562e9c6dfe3c07d0f03242512c4",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -105,6 +105,45 @@
                 "string"
             ],
             "time": "2015-11-06T14:35:42+00:00"
+        },
+        {
+            "name": "dropbox/dropbox-sdk",
+            "version": "v1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dropbox/dropbox-sdk-php.git",
+                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dropbox/dropbox-sdk-php/zipball/0f1a178ca9c0271bca6426dde8f5a2241578deae",
+                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">= 5.3"
+            },
+            "require-dev": {
+                "apigen/apigen": "4.1.2",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "2.0.0RC3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Dropbox": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Dropbox SDK for PHP",
+            "keywords": [
+                "dropbox"
+            ],
+            "time": "2016-08-08T23:48:49+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -234,6 +273,57 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jeylabs/laravel-dropbox-storage-driver",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeylabs/laravel-dropbox-storage-driver.git",
+                "reference": "355be274336ac6a664093c15bda316385205ecec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeylabs/laravel-dropbox-storage-driver/zipball/355be274336ac6a664093c15bda316385205ecec",
+                "reference": "355be274336ac6a664093c15bda316385205ecec",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.0",
+                "league/flysystem-dropbox": "^1.0",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.0",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jeylabs\\Laravel\\DropboxDriver\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "jeylabs",
+                    "email": "ratheep.ceymplon@jeylabs.com.au",
+                    "homepage": "https://jeylabs.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Dropbox storage driver for Laravel.",
+            "homepage": "https://github.com/jeylabs/laravel-dropbox-storage-driver",
+            "keywords": [
+                "driver",
+                "dropbox",
+                "laravel",
+                "storage"
+            ],
+            "time": "2017-04-06T06:33:57+00:00"
         },
         {
             "name": "laravel/framework",
@@ -509,6 +599,53 @@
                 "storage"
             ],
             "time": "2017-04-28T10:15:08+00:00"
+        },
+        {
+            "name": "league/flysystem-dropbox",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem-dropbox.git",
+                "reference": "939f91ca00d0255d9b3aa313e191480d00f09382"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-dropbox/zipball/939f91ca00d0255d9b3aa313e191480d00f09382",
+                "reference": "939f91ca00d0255d9b3aa313e191480d00f09382",
+                "shasum": ""
+            },
+            "require": {
+                "dropbox/dropbox-sdk": "~1.1",
+                "league/flysystem": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\Dropbox\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Flysystem adapter for Dropbox",
+            "abandoned": "spatie/flysystem-dropbox",
+            "time": "2016-04-25T18:51:39+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -833,16 +970,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.7",
+            "version": "v0.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "be969b9dc89dcaefdb9a3117fa91fa38bca19f50"
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/be969b9dc89dcaefdb9a3117fa91fa38bca19f50",
-                "reference": "be969b9dc89dcaefdb9a3117fa91fa38bca19f50",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
                 "shasum": ""
             },
             "require": {
@@ -902,7 +1039,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-20T12:51:31+00:00"
+            "time": "2017-06-24T06:16:19+00:00"
         },
         {
             "name": "ramsey/uuid",
