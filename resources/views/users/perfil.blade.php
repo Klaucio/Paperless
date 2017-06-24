@@ -111,7 +111,7 @@
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
-                                    <a href="#"><span
+                                    <a href="/disciplina/{{$disciplina->id}}"><span
                                                 class="card-title grey-text text-darken-4">{{$disciplina->designacao}}</span></a>
                                     <p>I am a very simple card. I am good at
                                         containing</p>
