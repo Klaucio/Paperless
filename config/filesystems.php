@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DRIVER', 'dropbox'),
 
     /*
     |--------------------------------------------------------------------------
@@ -61,6 +61,13 @@ return [
             'secret' => env('AWS_SECRET'),
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
+        ],
+        'dropbox' => [
+            'driver' => 'dropbox',
+            'app_secret' => env('mrfitbke10wxrqs'),
+            'token' => env('XBcbxusWooAAAAAAAAAAD5S1RH0HDc5exWRwhmUgpILDd-5GI4NR6yEENYQKEBkX'),
+            'prefix' => env(\Carbon\Carbon::now().'_'),
+            'app_url' => env('https://www.dropbox.com/developers/apps/info/r9ijux4xanxviqg'),
         ],
 
     ],

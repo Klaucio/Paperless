@@ -28,6 +28,8 @@ Route::get('perfil','UserController@getPerfil');
 Route::get('/teste', function () {
     return view('layouts/master');
 });
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('/uploadfile','UploadFileController@showUploadFile');
 
 
 Auth::routes();
